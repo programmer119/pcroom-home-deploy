@@ -1,5 +1,5 @@
 const $=(s,root=document)=>root.querySelector(s), $$=(s,root=document)=>[...root.querySelectorAll(s)];
-const APP_VERSION='v0.11';
+const APP_VERSION='v0.12';
 function injectVersion(){if($('#appVersion'))return;const v=document.createElement('div');v.id='appVersion';v.className='app-version';v.textContent=APP_VERSION;document.body.appendChild(v)}
 const fmtSeconds=(n)=>{n=Math.max(0,Number(n)||0);const h=Math.floor(n/3600),m=Math.floor((n%3600)/60);return `${h}시간 ${String(m).padStart(2,'0')}분`};
 const esc=(v)=>String(v??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;',"\"":'&quot;'}[c]));
